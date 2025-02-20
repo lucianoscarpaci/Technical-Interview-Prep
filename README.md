@@ -1,6 +1,6 @@
 # 📚 Technical Interview Prep CP
 
-Welcome to the Technical Interview Prep CP repository! This project is designed to help you prepare for technical interviews with a focus on computer programming concepts and problem-solving skills.
+Welcome to my 🌟🔥 CodePath Technical Interview Prep repository! 🚀📚 This repository is a comprehensive collection of solved questions for technical interviews. 🐍💻 
 
 ## 📂 Project Structure
 
