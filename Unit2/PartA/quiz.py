@@ -8,6 +8,3 @@ def get_top_player(dictionary):
             top_player = name
         
     return top_player, high_score
-
-
-    

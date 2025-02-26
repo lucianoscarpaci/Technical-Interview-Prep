@@ -8,17 +8,7 @@ def best_set(votes):
             vote_count[vote] = 1
 
     # Find the candidate with the most votes
-    max_votes = 0
-    best_candidates = []
-    # vote_count {'SZA': 3, 'Yo-Yo Ma': 1, 'Ethel Cain': 2}
-    for candidate, votes in vote_count.items():
-        if votes > max_votes:
-            max_votes = votes
-            best_candidates = candidate
-        elif votes == max_votes:
-            best_candidates = candidate
-    # return the candidate(s) with the most votes
-    return best_candidates
+    return max(vote_count, key=vote_count.get)
 
 votes1 = {
     1234: "SZA", 
