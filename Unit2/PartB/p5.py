@@ -8,17 +8,16 @@ def distinct_averages(species_populations):
   #first = species_populations[0] # 300 # 
   #second = min_species
   # return int((first + second) / 2)
-  species_list = []
-  for species in species_populations:
-    min_species = min(species_populations) #0
-    species_populations.remove(min_species) #[4,1,4,3,5]
-    max_species = max(species_populations) #5
-    avg_species = (min_species + max_species) / 2 #2.5
-    species_populations.remove(max_species) #[4,1,4,3]
-    species_list.append(avg_species)
+  species_populations.sort()
+  average = set()
+  l, r = 0, len(species_populations) - 1
+  while l < r:
+    average.add((species_populations[l] + species_populations[r]) / 2)
+    l += 1
+    r -= 1
+    return len(average)
     
 species_populations1 = [4,1,4,0,3,5]
-#species_populations2 = [1,100]
-
+species_populations2 = [1,100]
 print(distinct_averages(species_populations1))
-#print(distinct_averages(species_populations2)) 
+print(distinct_averages(species_populations2)) 
