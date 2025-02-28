@@ -7,7 +7,7 @@ def reverse_comments_queue(comments):
   # Iterate through the comments
   for comment in comments:
     stack.append(comment) # stack = ['Great post!', 'Love it!', 'Thanks for sharing.']
-    stack.reverse()
+  stack.reverse()
   return stack
 
 print(reverse_comments_queue(["Great post!", "Love it!", "Thanks for sharing."]))
