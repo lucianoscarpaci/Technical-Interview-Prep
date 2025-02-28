@@ -7,15 +7,13 @@
 # Species that do not appear in the priority_species should be placed
 # at the end of the observed species in ascending order. 
 def prioritize_observations(observed_species, priority_species):
-    # Sort the elements of observed_species such that the relative
-    # ordering of items in observed_species matches that of priority_species
-    if observed_species == priority_species:
-        observed_species.extend(observed_species.index(species))
-    # Species that do not appear in the priority_species should be placed
-    # at the end of the observed species in ascending order
-    observed_species.sort()
+    # Create a dictionary to store the priority of each species
+    priority_dict = {species: i for i, species in enumerate(priority_species)}
+    
+    # Sort the observed_species based on the priority, and then by natural order for non-priority species
+    observed_species.sort(key=lambda species: (priority_dict.get(species, float('inf')), species))
+    
     return observed_species
-
 
 observed_species1 = ["🐯", "🦁", "🦌", "🦁", "🐯", "🐘", "🐍", "🦑", "🐻", "🐯", "🐼"]
 priority_species1 = ["🐯", "🦌", "🐘", "🦁"]
