@@ -13,8 +13,10 @@ def is_valid_post_format(posts):
             # is not empty and whether the tag at the top of the stack
             # is the corresponding opening tag
         else:
+            # checks if the stack is empty
             if not stack:
-                return False #checks closing tag without opening tag
+                return False 
+            # checks if the closing tag is the corresponding opening tag
             if post == ")" and stack[-1] != "(":
                 return False
             if post == "]" and stack[-1] != "[":
