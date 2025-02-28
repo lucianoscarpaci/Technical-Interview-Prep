@@ -11,8 +11,11 @@
 # count_endangered_species("ff", "ffFFFFF") -> 2
 def count_endangered_species(endangered_species, observed_species):
     endangered_species = set(endangered_species)
-    observed_species = set(observed_species)
-    return len(endangered_species & observed_species)
+    count = 0
+    for species in observed_species:
+        if species in endangered_species:
+            count += 1
+    return count 
 endangered_species1 = "aA"
 observed_species1 = "aAAbbbb"
 
