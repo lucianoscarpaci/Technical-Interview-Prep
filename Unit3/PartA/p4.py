@@ -28,6 +28,7 @@ def engagement_boost(engagements):
         else:
             result[position] = right_square
             right -= 1
+        position -= 1
     
     return result #[0,1,9,16,100]
 
