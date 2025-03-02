@@ -6,16 +6,16 @@
 # The goal is to see if the post titles are symmetrical
 # if the post title is symmetrical, return True
 def is_symmetrical_title(title):
-    l = -1
-    r = len(title)
+    title = title.replace(" ", "")
+    l = 0
+    r = len(title) - 1
 
     while l < r:
-        l += 1
-        r -= 1
         if title[l].lower() != title[r].lower():
             return False
-        else:
-            return True
+        l += 1
+        r -= 1
+    return True
             
 print(is_symmetrical_title("A Santa at NASA"))
 print(is_symmetrical_title("Social Media"))
