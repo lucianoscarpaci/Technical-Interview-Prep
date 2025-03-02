@@ -33,3 +33,4 @@ def engagement_boost(engagements):
     return result #[0,1,9,16,100]
 
 print(engagement_boost([-4, -1, 0, 3, 10]))
+print(engagement_boost([-7, -3, 2, 3, 11]))
