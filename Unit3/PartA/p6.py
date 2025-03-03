@@ -3,8 +3,8 @@
 from collections import deque
 
 def edit_post(post):
-    q = deque(post)
-    current_word = deque()
+    q = deque(post) # Create a queue from the post
+    current_word = deque() # Create a queue for the current word
     reversed_post = []
 
     for char in q:
@@ -12,11 +12,11 @@ def edit_post(post):
             current_word.appendleft(char) # add char to the left of the current word
         else:
             # When a space is detected, finalize the current word
-            reversed_post.append(''.join(current_word))
-            reversed_post.append(' ')  # Add the space back
+            reversed_post.append(''.join(current_word)) #Add the word to the current word queue
+            reversed_post.append(' ')  # Add the space to the current word queue
             current_word.clear() # clear the current word
     reversed_post.append(''.join(current_word)) # add the last word
-    return ''.join(reversed_post)
+    return ''.join(reversed_post) # return the reversed post
 
 print(edit_post("Boost your engagement with these tips")) 
 print(edit_post("Check out my latest vlog"))
