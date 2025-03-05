@@ -5,30 +5,22 @@
 # append the additional performances onto the end of the 
 # merged schedule. Return the merged schedule.
 def merge_schedules(schedule1, schedule2):
-    """ 
     merged = ""
     i = 0
-    while i < len(schedule1) and i < len(schedule2):
-        merged += schedule1[i] + schedule2[i] #[a, p], [b, q], [c, r]
-        i += 1 # [1, 2, 3]
-    merged += schedule1[i:] + schedule2[i:] # [apbqcr],
-    """
-    merged = ""
-    left = len(schedule1) - len(schedule2)
-    right = len(schedule1) + len(schedule2)
-    position = right
-    while left <= right:
-        left_schedule = schedule1[left] + schedule2[left] #ap, #bq #cr
-        right_schedule = position
+    j = 0
 
-        if left < right:
-            merged += left_schedule
-            left += 1
-        else:
-            merged += right_schedule
-            right -= 1
-        position -= 1
-
+    while i < len(schedule1) and j < len(schedule2):
+        merged += schedule1[i] + schedule2[j]
+        i += 1
+        j += 1
+    
+    while i < len(schedule1):
+        merged += schedule1[i]
+        i += 1
+    
+    while j < len(schedule2):
+        merged += schedule2[j]
+        j += 1
     return merged 
 
 print(merge_schedules("abc", "pqr")) 
