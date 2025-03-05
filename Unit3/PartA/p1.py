@@ -5,6 +5,7 @@
 def is_valid_post_format(posts):
   # Iterate through the posts
     stack = []
+    matches = {"(":")", "[":"]", "{":"}"}
     for post in posts: #post '(' #post ')'
         # if its an opening tag, push it to the stack
         if post in ["(", "[", "{"]: # True
@@ -16,16 +17,12 @@ def is_valid_post_format(posts):
             # checks if the stack is empty
             if not stack:
                 return False 
-            # checks if the closing tag is the corresponding opening tag
-            if post == ")" and stack[-1] != "(":
+            if matches[stack[-1]] != post:
                 return False
-            if post == "]" and stack[-1] != "[":
-                return False # stack = ['(]']
-            if post == "}" and stack[-1] != "{":
-                return False
-            stack.pop() # stack = []
-    return True #posts = "()"
+            else:
+                stack.pop() # stack = []
+    return True if not stack else False
 
 print(is_valid_post_format("()"))
 print(is_valid_post_format("()[]{}")) 
-print(is_valid_post_format("(]"))
+print(is_valid_post_format("(]{)[}{}]}{}"))

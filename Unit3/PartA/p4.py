@@ -3,14 +3,6 @@
 # in non-decreasing order.
 # Task: Modify the solution to use the two-pointer technique.
 def engagement_boost(engagements):
-    squared_engagements = [] #[-4, -1, 0, 3, 10]
-    
-    for i in range(len(engagements)): # 0, 1, 2, 3, 4
-        squared_engagement = engagements[i] * engagements[i] # 16, 1, 0, 9, 100
-        squared_engagements.append((squared_engagement, i)) #[16,0], [1,1], [0,2], [9, 3], [100,4]
-    
-    squared_engagements.sort(reverse=True)#[100,4], [16,0], [9,3], [1,1], [0,2]
-    
     left = 0 #represents l
     right = len(engagements) - 1 #4 #represents r
     position = right
