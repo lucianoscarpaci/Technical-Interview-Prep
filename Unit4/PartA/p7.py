@@ -4,14 +4,16 @@
 # and returns True if the actions are balanced and False otherwise.
 # I will use a stack to keep track of the actions. If the stack is empty, I will add the action to the stack.
 # If the stack is not empty, I will check if the action is the opposite of the top of the stack. If it is, I will
-def validate_nft_actions():
-    stack = []
+from collections import deque
+def validate_nft_actions(actions):
+    q = deque(actions)
     for action in actions:
         if action == "add":
-            stack.append(action) # This will be stack = ["add"]
-        elif action == "remove":
-            if stack and stack[-1] == "add":
-                stack.pop()
+        # If the actions are balanced: ['add', 'add', 'remove', 'remove']
+            if q and q[-1] == "add": #['add', 'add']
+                return False
+            else:
+                return True
 
 actions = ["add", "add", "remove", "remove"]
 actions_2 = ["add", "remove", "add", "remove"]
