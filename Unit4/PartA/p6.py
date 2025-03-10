@@ -1,11 +1,12 @@
-# Sort the NFTs in order by the processing time and return it
+# Sort the NFTs in order and return it
 from collections import deque
 def process_nft_queue(nft_queue):
-   q = sorted(nft_queue, key=lambda x: x['processing_time'])
-   # start the deque
-   q = deque(q)
-   # extract the names 
-   return [nft["name"] for nft in q]
+   q = deque(nft_queue)
+   # extract the names
+   name_list = []
+   for nft in q:
+        name_list.append(nft["name"])
+   return name_list
 
 nft_queue = [
     {"name": "Abstract Horizon", "processing_time": 2},
@@ -26,3 +27,12 @@ nft_queue_3 = [
     {"name": "Galactic Voyage", "processing_time": 6}
 ]
 print(process_nft_queue(nft_queue_3))
+'''
+['Abstract Horizon', 'Pixel Dreams', 'Urban Jungle']
+['Golden Hour', 'Sunset Serenade', 'Ocean Waves']
+['Crypto Kitty', 'Galactic Voyage']
+
+Time complexity: O(n)
+Space complexity O(n)
+
+'''
