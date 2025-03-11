@@ -4,16 +4,17 @@
 # and returns True if the actions are balanced and False otherwise.
 # I will use a stack to keep track of the actions. If the stack is empty, I will add the action to the stack.
 # If the stack is not empty, I will check if the action is the opposite of the top of the stack. If it is, I will
-from collections import deque
+# balanced means that every add has a remove after it. It cannot have a remove before an add.
 def validate_nft_actions(actions):
-    q = deque(actions)
+    counter = 0
     for action in actions:
         if action == "add":
-        # If the actions are balanced: ['add', 'add', 'remove', 'remove']
-            if q and q[-1] == "add": #['add', 'add']
+            counter += 1
+        elif action == "remove": 
+            if counter == 0:
                 return False
-            else:
-                return True
+            counter -= 1
+    return counter == 0
 
 actions = ["add", "add", "remove", "remove"]
 actions_2 = ["add", "remove", "add", "remove"]
