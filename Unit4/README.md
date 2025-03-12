@@ -13,7 +13,7 @@ The UMPIRE method is a systematic approach to solving problems. It's like having
 ## 🌐 Part A Theme: NFTs
 Explore the fascinating world of Non-Fungible Tokens (NFTs) and learn how to apply the UMPIRE method to solve problems in this digital frontier. 💎
 
-## Part A Set2: Folder: PartA2
+## Part A Set2 Theme: Memes
 Extra Practice.
 
 ## 🌍 Part B Theme: Digital Nomads
