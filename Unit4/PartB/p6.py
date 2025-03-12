@@ -1,11 +1,11 @@
 def max_tasks_within_time(tasks, time_limit):
-    tasks.sort()
-    count = 0
-    for task in tasks:
-        if time_limit - task >= 0:
-            time_limit -= task
-            count += 1
-    return count
+    tasks.sort() #[5, 7, 8, 10]
+    count = 0 
+    for task in tasks: #5, 7, 8, 10
+        if time_limit - task >= 0: #20 - 5 = 15, 15 - 7 = 8, 8 - 8 = 0
+            time_limit -= task #15, 8, 0
+            count += 1 #1, 2, 3
+    return count #3
 
 tasks = [5, 10, 7, 8]
 time_limit = 20
