@@ -19,9 +19,6 @@ Extra Practice.
 ## 🌍 Part B Theme: Digital Nomads
 Discover the life of digital nomads and how the UMPIRE method can help solve the unique challenges they face while working remotely from anywhere in the world. 🏝️
 
-## Part B Set2: Folder: PartB2
-Extra Practice.
-
 ## 🎯 Learning Objectives
 - Grasp the UMPIRE method for effective problem-solving
 - Apply the UMPIRE method to real-world scenarios
