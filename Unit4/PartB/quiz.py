@@ -10,8 +10,12 @@ def is_anagram(s, t):
 
     for c in t:
         t_freq[c] = t_freq.get(c, 0) + 1
+    
+    print(s_freq[c])
+    print(t_freq[c])
 
-    return s_freq == t_freq
+    if s_freq == t_freq:
+        return True
 
 
 s = "anagram"
