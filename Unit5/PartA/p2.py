@@ -4,9 +4,12 @@ class Villager:
         self.species = species
         self.catchphrase = catchphrase
         self.furniture = []
-    
-    def greet_player(self, name, player_name, catchphrase):
+
+    def greet_player(self, player_name):
         return f"{self.name}: Hey there, {player_name}! How's it going, {self.catchphrase}!"
 
-bones = Villager("Bones", "Dog", "yip yip").greet_player("Bones", "player_name", "catchphrase")
-print(bones)
+bones = Villager("Bones", "Dog", "yip yip")
+print(bones.name)
+print(bones.species)  
+print(bones.catchphrase) 
+print(bones.furniture) 
