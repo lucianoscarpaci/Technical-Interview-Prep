@@ -12,12 +12,6 @@ Here's a quick overview of the project's structure:
 ├── LICENSE
 ├── README.md
 └── Unit1
-└── Unit7
-└── Unit8
-└── Unit9
-└── Unit10
-└── Unit11
-└── Unit12
     ├── README.md
     ├── PartA
     │   ├── p3.py
