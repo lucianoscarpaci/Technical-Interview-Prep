@@ -15,8 +15,8 @@ def collect_false_evidence(evidence):
         slow = slow.next
         fast = fast.next.next
         if slow == fast:
+            result.append(slow.value)
             break
-    result.append(slow.value)
     return result
 
 clue1 = Node("Unmarked sedan seen near the crime scene")
