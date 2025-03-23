@@ -10,17 +10,32 @@ def collect_false_evidence(evidence):
     # Return the value in any order.
     # Detect cycle
     # Collect all nodes that are part of the cycle
+    if not evidence:
+        return []
+    slow = evidence
+    fast = evidence
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+        if slow == fast:
+            break
+    else:
+        return []
+    
+    slow = evidence
+    while slow != fast:
+        slow = slow.next
+        fast = fast.next
+    
+    cycle = slow
     result = []
-    current_node = evidence
+    current = slow
     while True:
-        result.append(current_node.value)
-        current_node = current_node.next
-        if current_node is None:
-            return []
-        if current_node.value in result:
+        result.append(current.value)
+        current = current.next
+        if current == cycle:
             break
     return result
-
 
 clue1 = Node("Unmarked sedan seen near the crime scene")
 clue2 = Node("The stolen goods are at an abandoned warehouse")
