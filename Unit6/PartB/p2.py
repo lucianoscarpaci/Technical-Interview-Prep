@@ -3,9 +3,10 @@ class Node:
         self.value = value
         self.next = next
 
+
 def collect_false_evidence(evidence):
-	#return the array containing all values
-    #that are part of any cycle in evidence.
+    # return the array containing all values
+    # that are part of any cycle in evidence.
     # Return the value in any order.
     if not evidence:
         return None
@@ -18,6 +19,7 @@ def collect_false_evidence(evidence):
             result.append(slow.value)
             break
     return result
+
 
 clue1 = Node("Unmarked sedan seen near the crime scene")
 clue2 = Node("The stolen goods are at an abandoned warehouse")
