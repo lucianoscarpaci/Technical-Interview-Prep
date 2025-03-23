@@ -8,15 +8,17 @@ def collect_false_evidence(evidence):
     # return the array containing all values
     # that are part of any cycle in evidence.
     # Return the value in any order.
-    if not evidence:
-        return None
+    # Detect cycle
+    # Collect all nodes that are part of the cycle
     result = []
     slow = fast = evidence
-    while fast and fast.next:
-        slow = slow.next
-        fast = fast.next.next
-        if slow == fast:
-            result.append(slow.value)
+    current_node = evidence
+    while True:
+        result.append(current_node.value)
+        current_node = current_node.next
+        if current_node is None:
+            return []
+        if current_node.value in result:
             break
     return result
 
