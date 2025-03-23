@@ -12,7 +12,29 @@ def print_linked_list(head):
 
 
 def clear_trail(trailhead):
+    if not trailhead:
+        return None
     
+    slow = fast = trailhead
+    # Find the cycle using Floyd's cycle-finding algorithm
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+        if slow == fast:
+            break
+    else:
+        # No cycle found
+        return trailhead
+    # Find the start of the cycle
+    slow = trailhead
+    while slow != fast:
+        slow = slow.next
+        fast = fast.next
+    # Remove the cycle
+    while fast.next != slow:
+        fast = fast.next
+    fast.next = None
+    return trailhead
 
 marker1 = Node("Trailhead")
 marker2 = Node("Trail Fork")
