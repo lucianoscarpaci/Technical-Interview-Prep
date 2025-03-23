@@ -11,7 +11,6 @@ def collect_false_evidence(evidence):
     # Detect cycle
     # Collect all nodes that are part of the cycle
     result = []
-    slow = fast = evidence
     current_node = evidence
     while True:
         result.append(current_node.value)
