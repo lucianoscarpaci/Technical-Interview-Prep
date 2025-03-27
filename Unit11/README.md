@@ -1,5 +1,5 @@
 # Unit 11
 
-This directory will contain materials for Unit 11.
+This directory contains materials for Unit 11.
 
-Add your code files, documentation, and other resources here.
+You can add your code files, documentation, and other resources here as needed.
