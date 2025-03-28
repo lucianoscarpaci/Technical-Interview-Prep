@@ -12,31 +12,17 @@ def print_linked_list(head):
         current = current.next
 
 
-def loop_start(path_start):
-    if not path_start:
-        return None
+def middle_linked_list(head):
+    slow = fast = head
 
-    slow = fast = path_start
     while fast and fast.next:
         slow = slow.next
         fast = fast.next.next
         if slow == fast:
-            slow = path_start
-            while slow != fast:
-                slow = slow.next
-                fast = fast.next
-            return slow.value
-    return None
+            break
+
+    return slow.value
 
 
-path_start = Node("Mystic Falls")
-waypoint1 = Node("Troll's Bridge")
-waypoint2 = Node("Elven Arbor")
-waypoint3 = Node("Fairy Glade")
-
-path_start.next = waypoint1
-waypoint1.next = waypoint2
-waypoint2.next = waypoint3
-waypoint3.next = waypoint1
-
-print(loop_start(path_start))
+list = Node(1, Node(2, Node(3, Node(4, Node(5)))))
+print(middle_linked_list(list))
