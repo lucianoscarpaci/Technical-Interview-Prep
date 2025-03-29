@@ -1,6 +1,6 @@
 # 📚 Technical Interview Prep CP
 
-Welcome to my 🌟🔥 CodePath Technical Interview Prep repository! 🚀📚 This repository is a comprehensive collection of solved questions for technical interviews. 🐍💻 
+  📚 Welcome to my CodePath Technical Interview Prep repository! This repository is a comprehensive collection of solved questions for technical interviews. 🐍 💻
 
 ## 📂 Project Structure
 
