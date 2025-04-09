@@ -8,8 +8,12 @@ class TreeNode:
 def right_vine(root):
     if root is None:
         return []
-
-    return [root.val] + right_vine(root.right)
+    list = []
+    list.append(root.val)
+    if root.right:
+        list.append(root.right.val)
+        list.append(root.right.right.val)
+    return list
 
 
 """
