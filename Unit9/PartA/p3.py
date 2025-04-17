@@ -42,20 +42,10 @@ def build_tree(values):
 def max_tiers(cake):
     if cake is None:
         return 0
-    
-    queue = deque([cake])
-    max_tiers = 0
-    # BFS
-    while queue:
-        level_size = len(queue)
-        for i in range(level_size):
-            node = queue.popleft()
-            if node.left:
-                queue.append(node.left)
-            if node.right:
-                queue.append(node.right)
-        max_tiers += 1
-    return max_tiers
+
+    left_side = max_tiers(cake.left)
+    right_side = max_tiers(cake.right)
+    return 1 + max(left_side, right_side)
 
 
 """
