@@ -5,6 +5,7 @@ class TreeNode:
         self.right = right
 
 def print_tree(node):
+    """Helper function to print the tree nodes in level order."""
     if not root:
         return []
     queue = [root]
