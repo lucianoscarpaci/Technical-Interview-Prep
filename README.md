@@ -2,6 +2,8 @@
 
   📚 Welcome to my CodePath Technical Interview Prep repository! This repository is a comprehensive collection of solved questions for technical interviews. 🐍 💻
 
+> **Guide to the solutions can be found here:** [TIP102 Breakout Problem Solutions](https://guides.codepath.com/compsci/TIP102-Breakout-Problem-Solutions)
+
 ## 📂 Project Structure
 
 Here's a quick overview of the project's structure:
