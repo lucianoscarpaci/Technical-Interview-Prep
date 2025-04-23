@@ -1,14 +1,15 @@
 def get_adj_dict(flights):
-    adj_dict = {}
-    for a, b in flights:
-        if a not in adj_dict:
-            adj_dict[a] = []
-        adj_dict[a].append(b)
-
-        if b not in adj_dict:
-            adj_dict[b] = []
-        adj_dict[b].append(a)
-    return adj_dict
+    dict = {}
+    for flight in flights:
+        if flight[0] not in dict:
+            dict[flight[0]] = [flight[1]]
+        else:
+            dict[flight[0]].append(flight[1])
+        if flight[1] not in dict:
+            dict[flight[1]] = [flight[0]]
+        else:
+            dict[flight[1]].append(flight[0])
+    return dict
 
 flights = [['Cape Town', 'Addis Ababa'], ['Cairo', 'Lagos'], ['Lagos', 'Addis Ababa'], 
             ['Nairobi', 'Cairo'], ['Cairo', 'Cape Town']]
