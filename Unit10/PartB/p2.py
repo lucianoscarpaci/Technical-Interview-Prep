@@ -1,32 +1,21 @@
-def can_rebook(flights, source, dest):
-    n = len(flights)
-    visited = [False] * n
+def dfs(matrix, start):
+    visited = set()
+    result = []
 
-    def dfs(current):
-        if current == dest:
-            return True
-        visited[current] = True
+    def dfs_recursive(node):
+        visited.add(node)
+        result.append(node)
+        for neighbor in range(len(matrix[node])):
+            if matrix[node][neighbor] == 1 and neighbor not in visited:
+                dfs_recursive(neighbor)
+    dfs_recursive(start)
+    return result
 
-        for neighbor in range(n):
-            if flights[current][neighbor] == 1 and not visited[neighbor]:
-                if dfs(neighbor):
-                    return True
-        return False
-    return dfs(source)
-
-flights1 = [
-    [0, 1, 0], # Flight 0
-    [0, 0, 1], # Flight 1
-    [0, 0, 0]  # Flight 2
+matrix = [
+    [0, 1, 0, 0],
+    [1, 0, 1, 1],
+    [0, 1, 0, 0],
+    [0, 1, 0, 0]
 ]
-
-flights2 = [
-    [0, 1, 0, 1, 0],
-    [0, 0, 0, 1, 0],
-    [0, 0, 0, 0, 1],
-    [0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0]
-]
-
-print(can_rebook(flights1, 0, 2))
-print(can_rebook(flights2, 0, 2)) 
+start = 0
+print(dfs(matrix, start))
