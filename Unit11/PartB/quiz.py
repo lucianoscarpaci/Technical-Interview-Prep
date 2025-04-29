@@ -1,3 +1,9 @@
+# Input: grid1 = [[1,0,1,0,1]],[1,1,1,1,1],[0,0,0,0,0],
+# [1,1,1,1,1],[1,0,1,0,1]], 
+# grid2 = [0,0,0,0,0],[1,1,1,1,1],[0,1,0,1,0],[0,1,0,1,0],[1,0,0,0,1]]
+#Output: 2
+
+
 def next_moves(position, grid, visited, original_color):
     row, col = position
     rows, cols = len(grid), len(grid[0])
@@ -16,6 +22,7 @@ def next_moves(position, grid, visited, original_color):
     return valid_moves
 
 
+
 def dfs(row, col, grid, visited, original_color):
     stack = [(row, col)]
     visited[row][col] = True
@@ -30,26 +37,25 @@ def dfs(row, col, grid, visited, original_color):
                 stack.append((next_row, next_col))
 
 
-def flood_fill(image, sr, sc, color):
-    if image[sr][sc] == color:
-        return image
+def count_sub_islands(grid1, grid2):
+    if not grid1 or not grid2:
+        return 0
 
-    original_color = image[sr][sc]
-    m, n = len(image), len(image[0])
+    m, n = len(grid1), len(grid1[0])
     visited = [[False] * n for _ in range(m)]
+    count = 0
 
-    dfs(sr, sc, image, visited, original_color)
+    for row in range(m):
+        for col in range(n):
+            if (grid1[row][col] == 1 and
+                    grid2[row][col] == 1 and
+                    not visited[row][col]):
+                dfs(row, col, grid2, visited, grid2[row][col])
+                count += 1
 
-    for r in range(m):
-        for c in range(n):
-            if visited[r][c]:
-                image[r][c] = color
+    return count
 
-    return image
-
-
-# Example usage
-image = [[0, 0, 0], [0, 0, 0]]
-sr, sc = 0, 0
-color = 0
-print(flood_fill(image, sr, sc, color))  # Output: [[0, 0, 0], [0, 0, 0]]
+grid1 = [[1,0,1,0,1],[1,1,1,1,1],[0,0,0,0,0],
+[1,1,1,1,1],[1,0,1,0,1]]
+grid2 = [[0,0,0,0,0],[1,1,1,1,1],[0,1,0,1,0],[0,1,0,1,0],[1,0,0,0,1]]
+print(count_sub_islands(grid1, grid2))  # Output: 2
