@@ -1,19 +1,17 @@
-def pascals(num_rows):
-    store = {}
-    def pascal(row, col):
-        if row == 0 or col == 0 or row == col:
-            return 1
-        if (row, col) in store:
-            return store[(row, col)]
-        store[(row, col)] = pascal(row - 1, col - 1) + pascal(row - 1, col)
-        return store[(row, col)]
-    result = []
-    for i in range(num_rows):
-        result.append([pascal(i, j) for j in range(i + 1)])
-    result.pop() # Remove the last row if it is [1]
+def pow(x, n):
+    if n == 0:
+        return 1
+    elif n < 0:
+        x = 1 / x
+        n = -n
+    result = 1
+    while n > 0:
+        if n % 2 == 1:
+            result *= x
+        x *= x
+        n //= 2
     return result
 
-numRows = 5
-print(pascals(numRows))
-numRows = 1
-print(pascals(numRows))
+print(f"{pow(2, 10):.2f}") # Output: 1024.00
+print(f"{pow(2.1, 3):.2f}") # Output: 9.26
+print(f"{pow(2, -2):.2f}") # Output: 0.25
