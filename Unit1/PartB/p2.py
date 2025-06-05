@@ -1,15 +1,23 @@
-def count_evens(lst):
-    count = 0
-    for word in lst:
-        if len(word) % 2 == 0:
-            count += 1
-    return count
+def goldilocks_approved(nums):
+    """
+    Write a function goldilocks_approved() that takes in the
+    list of
+    distinct positive integers nums and returns
+    any number from the list that is neither
+    the minimum nor the maximum value in the array, or -1
+    """
+    for idx in nums:
+        if idx != min(nums) and max(nums):
+            return idx
+        else:
+            return -1
 
-lst = ["na", "nana", "nanana", "batman", "!"]
-print(count_evens(lst))
 
-lst = ["the", "joker", "robin"]
-print(count_evens(lst))
+nums = [3, 2, 1, 4]
+print(goldilocks_approved(nums))
 
-lst = ["you", "either", "die", "a", "hero", "or", "you", "live", "long", "enough", "to", "see", "yourself", "become", "the", "villain"]
-print(count_evens(lst))
+nums = [1, 2]
+print(goldilocks_approved(nums))
+
+nums = [2, 1, 3]
+print(goldilocks_approved(nums))
