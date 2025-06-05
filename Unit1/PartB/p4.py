@@ -1,14 +1,13 @@
-def goldilocks_approved(nums):
-    for num in nums:
-        if num != min(nums) and max(nums):
-            return num
-        return -1
+def sum_of_digits(num):
+    total_sum = 0
+    while num > 0:
+        total_sum += num % 10
+        num //= 10
+    return total_sum
 
-nums = [3, 2, 1, 4]
-print(goldilocks_approved(nums))
 
-nums = [1, 2]
-print(goldilocks_approved(nums))
+num = 423
+print(sum_of_digits(num))
 
-nums = [2, 1, 3]
-print(goldilocks_approved(nums))
+num = 4
+print(sum_of_digits(num))
