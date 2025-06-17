@@ -12,6 +12,9 @@ Welcome to Unit 3 of our Technical Interview Prep Course! In this unit, we will 
 
 ## 🎉 Part B: Theme - Cultural Festival
 
+## 📚 Part C: Advanced Problem Set 1
+This part will challenge you with advanced problems that require a deep understanding of stacks, queues, and the two-pointer technique.
+
 ### 📚 Learning Objectives
 
 In this section, we will continue our journey with:
