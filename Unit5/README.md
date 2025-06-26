@@ -23,6 +23,9 @@ Part B focuses on linked lists and their applications:
 - **Doubly Linked Lists**: Explore the benefits of having references to both previous and next nodes.
 - **Circular Linked Lists**: Understand how to create a circular structure for efficient looping.
 
+## 📚 Part C: Advanced Problem Set 1
+This part will challenge you with advanced problems that require a deep understanding of OOP and linked lists. Get ready to flex those coding muscles! 💪
+
 ## 🎯 Learning Objectives
 
 By the end of this unit, you will be able to:

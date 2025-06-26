@@ -14,6 +14,10 @@ Unleash your inner superhero as you apply Binary Search to a universe of Marvel 
 
 Set sail on a voyage of discovery as you navigate through a fleet of cruise ships using Binary Search! ⚓️🛳️
 
+## 📚 Part C: Advanced Problem Set 1
+This part will challenge you with advanced problems that require a deep understanding of Binary Search and its applications. Get ready to flex those coding muscles! 💪
+
+
 ## 🎯 Learning Objectives
 
 - Master the art of Binary Search 🧠

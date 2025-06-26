@@ -17,7 +17,7 @@ Explore the fascinating world of Non-Fungible Tokens (NFTs) and learn how to app
 Discover the life of digital nomads and how the UMPIRE method can help solve the unique challenges they face while working remotely from anywhere in the world. 🏝️
 
 ## 📚 Part C: Advanced Problem Set 1
-This part will challenge you with advanced problems that require a deep understanding of stacks, queues, and the two-pointer technique.
+This part will challenge you with advanced problems that require a deep understanding of the UMPIRE method. Get ready to flex those problem-solving muscles! 💪
 
 ## 🎯 Learning Objectives
 - Grasp the UMPIRE method for effective problem-solving

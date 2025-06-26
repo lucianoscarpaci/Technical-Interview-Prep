@@ -18,6 +18,9 @@ In Part A, we'll use linked lists to manage and organize data related to music c
 
 Part B takes us on an adventure through the city, where we'll use linked lists to solve problems and uncover hidden gems. Whether it's mapping out a route or managing city data, linked lists are your trusty guide! 🗺️
 
+## 📚 Part C: Advanced Problem Set 1
+This part will challenge you with advanced problems that require a deep understanding of linked lists. Get ready to flex those coding muscles! 💪
+
 ## 🎯 Learning Objectives
 
 By the end of this unit, you will:
