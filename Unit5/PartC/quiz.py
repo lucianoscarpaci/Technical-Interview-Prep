@@ -1,11 +1,16 @@
 class Node:
-    def __init__(self, value, next=None):
+    def __init__(self, value=None):
         self.value = value
-        self.next = next
+        self.next = None
 
-# For testing
-def print_linked_list(head):
+
+def create_linked_list(values):
+    if not values:
+        return None
+
+    head = Node(values[0])
     current = head
-    while current:
-        print(current.value, end=" -> " if current.next else "\n")
+    for value in values[1:]:
+        current.next = Node(value)
         current = current.next
+    return head
