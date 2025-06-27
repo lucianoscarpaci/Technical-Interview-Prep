@@ -36,7 +36,6 @@ head1 = Node("apple", Node("cherry", Node("orange", Node("peach", Node("pear")))
 head2 = Node("Rainbow Trout", Node("Ray"))
 head3 = Node("Rainbow Stag")
 
-
 print_linked_list(remove_nth_from_end(head1, 2))
 print_linked_list(remove_nth_from_end(head2, 1))
 print_linked_list(remove_nth_from_end(head3, 1))
