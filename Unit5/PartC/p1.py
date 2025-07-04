@@ -1,6 +1,6 @@
 class Node:
-    def __init__(self, value, next=None):
-        self.value = value
+    def __init__(self, fish_name, next=None):
+        self.fish_name = fish_name
         self.next = next
 
 
@@ -8,29 +8,21 @@ class Node:
 def print_linked_list(head):
     current = head
     while current:
-        print(current.value, end=" -> " if current.next else "\n")
+        print(current.fish_name, end=" -> " if current.next else "\n")
         current = current.next
 
 
-def find_max(head):
-    if not head:
+def catch_fish(head):
+    if head is None:
         return None
-
-    current = head
-    max_val = head.value
-    while current:
-        if current.value > max_val:
-            max_val = current.value
-        current = current.next
-    return max_val
+    else:
+        print(f"Catch: {head.fish_name}")
+        return head.next
 
 
-head1 = Node(5, Node(6, Node(7, Node(8))))
+fish_list = Node("Carp", Node("Dace", Node("Cherry Salmon")))
+empty_list = None
 
-# Linked List: 5 -> 6 -> 7 -> 8
-print(find_max(head1))
-
-head2 = Node(5, Node(8, Node(6, Node(7))))
-
-# Linked List: 5 -> 8 -> 6 -> 7
-print(find_max(head2))
+print_linked_list(fish_list)
+print_linked_list(catch_fish(fish_list))
+print(catch_fish(empty_list))
