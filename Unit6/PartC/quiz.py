@@ -1,19 +1,18 @@
 class ListNode:
-    def __init__(self, x):
-        self.val = x
-        self.next = None
+    def __init__(self, value=0, next=None):
+        self.value = value
+        self.next = next
 
-class Solution:
-    def getIntersectionNode(self, headA: ListNode, headB: ListNode):
-        if not headA or not headB:
-            return None
-        
-        pA, pB = headA, headB
-        
-        # Traverse both lists
-        while pA != pB:
-            # If we reach the end of one list, start at the beginning of the other
-            pA = pA.next if pA else headB
-            pB = pB.next if pB else headA
-        
-        return pA
+
+def count_nodes(head, val):
+    count = 0
+    current = head
+    while current.next:
+        if current == None:
+            break
+        if current.value == val:
+            count += 1
+        current = current.next
+    if current.value == val:
+        count += 1
+    return count
