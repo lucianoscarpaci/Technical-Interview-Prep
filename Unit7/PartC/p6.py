@@ -35,12 +35,22 @@ def decode_scroll_recursive(scroll):
                     num = num * 10 + int(scroll[index])
                     index += 1
                 index += 1
-            decoded_substring, index = helper(index)
-            decoded_string += des
+                decoded_substring, index = helper(index)
+                decoded_string += decoded_substring * num
+            elif scroll[index] == "]":
+                return decoded_string, index + 1
+            else:
+                decoded_string += scroll[index]
+                index += 1
+        return decoded_string, index
+
+    final_decoded_string, _ = helper(0)
+    return final_decoded_string
 
 
 scroll = "3[Coral2[Shell]]"
 print(decode_scroll(scroll))
-
+scroll = "4[Coral3[Shell]]"
+print(decode_scroll(scroll))
 scroll = "2[Poseidon3[Sea]]"
 print(decode_scroll(scroll))
