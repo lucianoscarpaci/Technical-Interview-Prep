@@ -24,6 +24,9 @@ Explore the theme of foraging for fruit as you learn about binary trees. 🍏�
 
 Rearrange plants and understand the intricacies of binary trees. 🌿🌻
 
+## 📚 Part C: Advanced Problem Set 1
+This part will challenge you with advanced problems that require a deep understanding of binary trees and their applications. Get ready to flex those coding muscles! 💪
+
 ---
 
 ## 🎯 Learning Objectives
