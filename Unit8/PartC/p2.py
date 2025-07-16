@@ -7,18 +7,16 @@ class TreeNode:
 
 def right_vine(root):
     current = root
-    if current is None:
+    right_subtree = current.right
+    if root is None:
         return []
-    return [current.val] + right_vine(current.right)
+
+    if right_subtree is None:
+        return [current.val]
+
+    return [current.val] + right_vine(right_subtree)
 
 
-"""
-        Root
-      /      \
-    Node1    Node2
-  /         /    \
-Leaf1    Leaf2  Leaf3
-"""
 ivy1 = TreeNode(
     "Root",
     TreeNode("Node1", TreeNode("Leaf1")),

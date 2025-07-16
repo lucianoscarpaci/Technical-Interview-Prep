@@ -7,12 +7,15 @@ class TreeNode:
 
 def sum_inventory(inventory):
     current = inventory
-    if current is None:
+    if not current:
         return 0
-    sum_left = sum_inventory(current.left)
-    sum_right = sum_inventory(current.right)
+    
+    left_tree = sum_inventory(current.left)
+    right_tree = sum_inventory(current.right)
 
-    return current.val + sum_left + sum_right
+    return current.val + left_tree + right_tree
+
+
 
 
 """

@@ -6,16 +6,12 @@ class TreeNode:
 
 
 def right_vine(root):
-    # Initialize an empty list to store the result.
     result = []
-    # Set the current node to root
     current = root
-    while current is not None:
+    right_tree = current.val
+    while current:
         result.append(current.val)
-        if current.right:
-            current = current.right
-        else:
-            break
+        current = current.right
     return result
 
 

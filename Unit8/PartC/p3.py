@@ -7,13 +7,14 @@ class TreeNode:
 
 def survey_tree(root):
     current = root
-    if current is None:
-        return []
+    result = []
+    if not current:
+      return []
 
-    left_subtree = survey_tree(current.left)
-    right_subtree = survey_tree(current.right)
+    left_tree = survey_tree(current.left)
+    right_tree = survey_tree(current.right)
 
-    return left_subtree + right_subtree + [current.val]
+    return left_tree + right_tree + [current.val]
 
 
 """
