@@ -27,6 +27,9 @@ Rearrange plants and understand the intricacies of binary trees. 🌿🌻
 ## 📚 Part C: Advanced Problem Set 1
 This part will challenge you with advanced problems that require a deep understanding of binary trees and their applications. Get ready to flex those coding muscles! 💪
 
+## 📚 Part D: Advanced Problem Set 2
+This section focuses on advanced problems that build upon the previous set of challenges. 💪
+
 ---
 
 ## 🎯 Learning Objectives
