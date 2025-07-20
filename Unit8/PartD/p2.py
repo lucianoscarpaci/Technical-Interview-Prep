@@ -41,21 +41,7 @@ def build_tree(values):
 
 
 def find_flower(inventory, name):
-    if inventory is None:
-        return False
-        
-    queue = deque([inventory])
-
-    while queue:
-        node = queue.popleft()
-        if node.val == name:
-            return True
-        if node.left is not None:
-            queue.append(node.left)
-        if node.right is not None:
-            queue.append(node.right)
-
-    return False
+    pass
 
     
 

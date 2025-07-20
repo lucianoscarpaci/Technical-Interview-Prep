@@ -40,16 +40,13 @@ def build_tree(values):
 
 
 def sort_plants(collection):
-    current = collection
     result = []
-
+    current = collection
     def inorder(node):
-        current = node
-        if current is not None:
-            inorder(current.left)
-            result.append((current.key, current.val))
-            inorder(current.right)
-
+        if node is not None:
+            inorder(node.left)
+            result.append((node.key, node.val))
+            inorder(node.right)
     inorder(current)
     return result
 

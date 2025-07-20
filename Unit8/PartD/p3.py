@@ -60,15 +60,10 @@ def print_tree(root):
 
 
 def add_plant(collection, name):
-    current = collection
-    if current is None:
-        return TreeNode(name)
-    if name < current.val:
-        current.left = add_plant(current.left, name)
-    else:
-        current.right = add_plant(current.right, name)
-    return current
-
+    collection = plant
+    if collection == name:
+        do something
+    return collection
 
 """
             Money Tree
