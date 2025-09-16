@@ -18,6 +18,7 @@ Step into the Batcave with Batman and discover the power of arrays. 🦸‍♂�
 ## 📚 Part C: Advanced Problem Set 1
 This part will challenge you with advanced problems that require a deep understanding of strings and arrays. Get ready to flex those coding muscles! 💪
 
+## 📚 Part D: Advanced Problem Set 2
 
 ### Learning Objectives:
 - Grasp the concept of arrays and their uses.
