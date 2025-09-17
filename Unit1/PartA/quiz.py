@@ -1,12 +1,18 @@
-def reverse_lst(lst):
-    left = 0 # index 0
-    right = len(lst) - 1 #index 4
-    
-    while left < right:
-        lst[left], lst[right] = lst[right], lst[left]
-        left += 1
-        right -= 1 
-    
-    return lst
+def tiggerfy(s):
+    ans = ""
+    for c in s:
+        if c in "tigger":
+            continue
+        ans += c
+    return ans
 
-print(reverse_lst([1, 2, 3, 4, 5]))
+
+s = "suspicerous"
+print(tiggerfy(s))
+
+s = "Trigger"
+print(tiggerfy(s))
+tiggerfy(s)
+s = "Hunny"
+print(tiggerfy(s))
+tiggerfy(s)
