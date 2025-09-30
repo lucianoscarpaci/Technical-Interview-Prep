@@ -18,6 +18,8 @@ Join us on a journey to learn about endangered species and how dictionaries can 
 ## 📚 Part C: Advanced Problem Set 1
 This part will challenge you with advanced problems that require a deep understanding of dictionaries and their applications. Get ready to flex those coding muscles! 💪
 
+## 📚 Part D: Advanced Problem Set 2
+
 ### Learning Objectives:
 - Grasp the concept of key-value pairs in real-world scenarios.
 - Learn how to iterate over dictionaries and access their elements.
