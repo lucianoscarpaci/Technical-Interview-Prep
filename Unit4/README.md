@@ -19,6 +19,10 @@ Discover the life of digital nomads and how the UMPIRE method can help solve the
 ## 📚 Part C: Advanced Problem Set 1
 This part will challenge you with advanced problems that require a deep understanding of the UMPIRE method. Get ready to flex those problem-solving muscles! 💪
 
+## 📚 Part D: Advanced Problem Set 2
+This part will take your skills to the next level with even more complex problems. You'll learn to adapt and refine your approach using the UMPIRE method. 🚀
+
+
 ## 🎯 Learning Objectives
 - Grasp the UMPIRE method for effective problem-solving
 - Apply the UMPIRE method to real-world scenarios
