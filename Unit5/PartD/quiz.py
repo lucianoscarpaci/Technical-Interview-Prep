@@ -13,8 +13,8 @@ OUTPUT: The middle node of linked list
 CONDITIONS: Moving the pointer to the middle.
 EDGE CASES: While the current is empty and current next node is empty
 then return empty list.
-If we have more than two nodes 
-MATCH:
+If we have more than two nodes
+MATCH and PLAN:
 - Singly linked list
 - slow fast pointer method
 - head = None
@@ -22,6 +22,17 @@ MATCH:
 - while current and current next
 - update the current pointer to the middle
 - return the current pointer
-PLAN:
 """
-#IMPLEMENT
+
+
+def middle_node(head):
+    if not head:
+        return []
+
+    slow = fast = head
+
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+
+    return slow
