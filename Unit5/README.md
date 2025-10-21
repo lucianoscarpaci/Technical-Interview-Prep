@@ -26,6 +26,10 @@ Part B focuses on linked lists and their applications:
 ## 📚 Part C: Advanced Problem Set 1
 This part will challenge you with advanced problems that require a deep understanding of OOP and linked lists. Get ready to flex those coding muscles! 💪
 
+## 📚 Part D: Advanced Problem Set 2
+In this section, you'll tackle even more complex problems that combine OOP principles with linked list operations. This is your chance to demonstrate mastery of the concepts learned in previous parts. 🚀
+
+
 ## 🎯 Learning Objectives
 
 By the end of this unit, you will be able to:
