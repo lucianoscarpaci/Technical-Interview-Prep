@@ -17,6 +17,8 @@ Set sail on a voyage of discovery as you navigate through a fleet of cruise ship
 ## 📚 Part C: Advanced Problem Set 1
 This part will challenge you with advanced problems that require a deep understanding of Binary Search and its applications. Get ready to flex those coding muscles! 💪
 
+## 📚 Part C: Advanced Problem Set 2
+
 
 ## 🎯 Learning Objectives
 
