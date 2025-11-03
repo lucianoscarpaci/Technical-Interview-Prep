@@ -21,6 +21,8 @@ Part B takes us on an adventure through the city, where we'll use linked lists t
 ## 📚 Part C: Advanced Problem Set 1
 This part will challenge you with advanced problems that require a deep understanding of linked lists. Get ready to flex those coding muscles! 💪
 
+## 📚 Part D: Advanced Problem Set 2
+
 ## 🎯 Learning Objectives
 
 By the end of this unit, you will:
