@@ -40,8 +40,11 @@ Transform, reshape, and enchant your binary trees with powerful algorithms and c
 
 ---
 ## Part C: Advanced Problem Set 1
+This section challenges you with complex problems that require a deep understanding of binary tree traversals and properties.  
 
 ## Part D: Advanced Problem Set 2
+Dive into more intricate scenarios and enhance your problem-solving skills with these advanced binary tree challenges.
+
 
 ## 🎯 Learning Objectives
 
