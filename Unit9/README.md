@@ -39,6 +39,9 @@ Become a tree wizard!
 Transform, reshape, and enchant your binary trees with powerful algorithms and creative thinking. 🪄🌳
 
 ---
+## Part C: Advanced Problem Set 1
+
+## Part D: Advanced Problem Set 2
 
 ## 🎯 Learning Objectives
 
