@@ -23,6 +23,12 @@ Can you find the shortest route from New York to Tokyo? 🌍
 Simulate booking flights and managing routes.  
 How do airlines optimize connections and costs? 💸
 
+## Part C: Advanced Problem Set 1
+Tackle complex graph problems that test your understanding of traversal and search algorithms.  
+
+## Part D: Advanced Problem Set 2
+Dive deeper into challenging scenarios that require innovative graph solutions.  
+
 ---
 
 ## 🎯 Learning Objectives
