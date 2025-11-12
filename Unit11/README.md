@@ -41,6 +41,13 @@ How do we model who gets infected? With graphs and matrices, of course!
 
 ---
 
+## Part C: Advanced Problem Set 1
+Tackle complex graph problems that test your understanding of traversal and search algorithms.  
+
+
+## Part D: Advanced Problem Set 2
+Tackle complex graph problems that test your understanding of traversal and search algorithms.
+
 ## 🎯 Learning Objectives
 
 By the end of this unit, you'll be able to:

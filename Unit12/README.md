@@ -36,6 +36,23 @@ DP helps you:
 
 ---
 
+## Part C: Memoization vs. Tabulation 📝📊
+Two powerful DP techniques to boost your coding efficiency:
+- **Memoization**: Top-down approach that caches results of expensive function calls 🧠💾
+- **Tabulation**: Bottom-up approach that builds a table iteratively 📈🗂️
+
+---
+
+## Part D: Optimizing Recursive Solutions
+Take your recursive solutions to the next level by:
+- Identifying overlapping subproblems 🔍
+- Storing intermediate results to avoid redundant calculations 💡
+- Transforming naive recursion into efficient DP solutions 🚀
+---
+
+
+
+
 ## 🎯 Learning Objectives
 
 By the end of this unit, you’ll be able to:
