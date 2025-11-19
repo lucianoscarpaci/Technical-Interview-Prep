@@ -25,20 +25,14 @@ def can_move_safely(position, grid):
     def dfs(row, col):
         if (row, col) == target:
             return True
-
-        visited = set()
-
-        def dfs(row, col):
-            if (row, col) == target:
+        visited.add((row, col))
+        for next_move in next_moves((row, col), grid, visited):
+            if dfs(next_move[0], next_move[1]):
                 return True
-            visited.add((row, col))
-            for next_row, next_col in next_moves((row, col), grid, visited):
-                if (next_row, next_col) not in visited:
-                    if dfs(next_row, next_col):
-                        return True
-            return False
 
-        return dfs(start_row, start_col)
+        return False
+
+    return dfs(start_row, start_col)
 
 
 grid = [
@@ -55,3 +49,26 @@ position_3 = (3, 0)
 print(can_move_safely(position_1, grid))
 print(can_move_safely(position_2, grid))
 print(can_move_safely(position_3, grid))
+
+
+
+def list_all_escape_routes(grid):
+    rows, cols = len(grid), len(grid[0])
+    target = (rows - 1, cols - 1)
+    all_routes = []
+
+    def dfs(position, path, visited):
+        if position == target:
+            all_routes.append(path.copy())
+            return
+        visited.add(position)
+        for next_move in next_moves(position, grid, visited):
+            path.append(next_move)
+            dfs(next_move, path, visited)
+            path.pop()
+        visited.remove(position)
+
+    if grid[0][0] == 1:
+        dfs((0, 0), [(0, 0)], set())
+    return all_routes
+
