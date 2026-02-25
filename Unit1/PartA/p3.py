@@ -1,14 +1,17 @@
 def print_catchphrase(character):
-    if character == "Pooh":
-        print("Oh bother!")
-    elif character == "Tigger":
-        print("TTFN: Ta-ta for now!")
-    elif character == "Eeyore":
-        print("Thanks for noticing me.")
-    elif character == "Christopher Robin":
-        pass
+
+    character = character.lower()
+    hashmap = {
+        "pooh": "Oh, bother!",
+        "tigger": "TTFN: Ta-ta for now!",
+        "eeyore": "Thanks for noticing me.",
+        "christopher robin": "Silly old bear.",
+    }
+    if character in hashmap:
+        print(hashmap[character])
     else:
-        print(f"I'm sorry, I don't know {character}'s catchphrase!")
+        print("Sorry, I don't know Piglet's catchphrase.")
+
 
 character = "Pooh"
 print_catchphrase(character)

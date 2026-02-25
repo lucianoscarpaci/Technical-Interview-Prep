@@ -1,8 +1,8 @@
 def sum_honey(hunny_jars):
-    count = 0
-    for i in hunny_jars:
-        count += i
-    return count
+    sum = 0
+    for honey in hunny_jars:
+        sum += honey
+    return sum
 
 
 hunny_jars = [2, 3, 4, 5]
