@@ -1,9 +1,17 @@
-def count_words(sentence):
-    words = sentence.split() #['this', 'is', 'a', 'test', 'only']
-    word_count = {}
-    for word in words: # 'this'
-        word_count[word] = words.count(word)
-    return word_count
+def playSegments(coins):
+    n = len(coins)
+    coins.sort(reverse=True)
 
-sentence = "this is a test only this will not be a test is it a test is it test or no test"
-print(count_words(sentence))
+    for k in range(1, n + 1):
+        if sum(coins[:k]) > sum(coins[k:]):
+            return k
+        elif sum(coins[:k]) == sum(coins[k:]):
+            return k - 1
+
+    return n
+
+
+coins = [1, 1, 0, 1]
+print(playSegments(coins))
+coins = [1, 0, 0, 1, 0]
+print(playSegments(coins))
