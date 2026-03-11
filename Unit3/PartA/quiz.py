@@ -1,13 +1,31 @@
-from collections import deque
+def engagement_boost(engagements):
+    squared_engagements = []
 
-def process_numbers(nums):
-    queue = deque([10, 20, 30])
-    for num in nums:
-        if num % 2 == 0:
-            queue.append(num)
-        elif queue and num % 2 != 0:
-            queue.popleft()
-    return list(queue)
+    for i in range(len(engagements)):
+        squared_engagement = engagements[i] * engagements[i]
+        squared_engagements.append((squared_engagement, i))
 
-nums = [2, 3, 4, 5, 6, 7]
-print(process_numbers(nums))
+    squared_engagements.sort(reverse=True)
+    left, right = 0, len(engagements)
+    result = [0] * len(engagements)
+    position = len(engagements) - 1
+    squared_left = []
+    squared_right = []
+    while left <= right:
+        squared_left[left] = engagements[left] * engagements[left]
+        squared_right[right] = engagements[right] * engagements[right]
+
+        if left < right:
+            result[position] = squared_engagements[left]
+            result[position] = squared_engagements[right]
+        else:
+            right
+    return result
+
+
+print(engagement_boost([-4, -1, 0, 3, 10]))
+print(engagement_boost([-7, -3, 2, 3, 11]))
+"""
+[0, 1, 9, 16, 100]
+[4, 9, 9, 49, 121]
+"""
