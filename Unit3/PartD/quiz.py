@@ -1,18 +1,18 @@
-def is_valid_post_format(posts):
-    parenthesis = []
-    chars = {"(": ")", "[": "]", "{": "}"}
-    for char in posts:
-        if char in chars.keys():
-            parenthesis.append(char)
-        else:
-            if parenthesis:
-                last_open = parenthesis.pop()
-                if chars[last_open] != char:
-                    return False
-    return True
+# What is output of code snippet?
+from collections import deque
 
 
-print(is_valid_post_format("()"))
-print(is_valid_post_format("()[]{}"))
-#[(] char = ), last_open = ( 
-print(is_valid_post_format("(]"))
+def check_balances(s):
+    stack = []
+    matches = {")": "(", "]": "[", "}": "{"}
+
+    for char in s:
+        if char in matches.values():
+            stack.append(char)
+
+        if char in matches.keys():  # Check if char is a closing bracket
+            if not stack or stack[-1] != matches[char]:
+                return False  # Return False if not balanced
+            stack.pop()  # Pop only if the top of the stack matches
+
+    return not stack

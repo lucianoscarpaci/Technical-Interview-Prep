@@ -1,29 +1,19 @@
-def evalRPN(tokens):
-    stack = []
-    operators = {"+", "-", "*", "/"}
-
-    for token in tokens:
-        if token in operators:
-            b = stack.pop()
-            a = stack.pop()
-            if token == "+":
-                stack.append(a + b)
-            elif token == "-":
-                stack.append(a - b)
-            elif token == "*":
-                stack.append(a * b)
-            elif token == "/":
-                # Use int() to truncate towards zero
-                stack.append(int(a / b))
-        else:
-            stack.append(int(token))
-
-    return stack[0]
+def is_palindrome(landmarks):
+    left, right = 0, len(landmarks) - 1
+    while left <= right:
+        if landmarks[left] == landmarks[right]:
+            return False
+        left += 1
+        right -= 1
+    return True
 
 
-tokens = ["2", "1", "+", "3", "*"]
-print(evalRPN(tokens))  # Output: 9
-tokens = ["4", "13", "5", "/", "+"]
-print(evalRPN(tokens))  # Output: 6
-tokens = ["4", "2", "-", "3", "*"]
-print(evalRPN(tokens))  # Output: 6
+def first_symmetrical_landmark(landmarks):
+    for landmark in landmarks:
+        if is_palindrome(landmark):
+            return landmark
+    return ""
+
+
+print(first_symmetrical_landmark(["canyon", "forest", "rotor", "mountain"]))
+print(first_symmetrical_landmark(["plateau", "valley", "cliff"]))
