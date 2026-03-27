@@ -22,17 +22,19 @@ It is equivalent to lst[-1] in a normal list.
 
 def delete_tail(head):
     # If the list is empty or has only one element, return None or head
-    if not head or not head.next:
+    current = head
+    if head is None or head.next is None:
         return None
 
-    current = head
     # Traverse the list until the second last node
-    while current.next.next:
-        current = current.next
+    previous = head
+    current = head
+    while current.next is not None:
+        previous = current
+        current = current.next.next
 
     # Remove the tail by setting the second last node's next to None
-    current.next = None
-    return head
+    previous.next = None
 
 
 # Create the nodes

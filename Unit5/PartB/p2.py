@@ -7,7 +7,6 @@ class Node:
         self.next = next
 
 
-# For testing
 def print_linked_list(head):
     current = head
     while current:
@@ -23,5 +22,6 @@ isabelle = Node("Isabelle")
 kk_slider.next = harriet
 harriet.next = saharah
 saharah.next = isabelle
+
 # Print linked list
 print_linked_list(kk_slider)

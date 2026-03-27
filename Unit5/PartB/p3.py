@@ -13,7 +13,8 @@ def print_linked_list(head):
 
 
 def add_first(head, task):
-    # Create a new node with the given task and set its next pointer to the current head
+    # The function should insert a new Node object
+    # with the value task as the new head of the linked list and return the new node.
     new_node = Node(task)
     new_node.next = head
     return new_node
@@ -24,7 +25,6 @@ task_2 = Node("dig fossils")
 task_3 = Node("catch bugs")
 task_1.next = task_2
 task_2.next = task_3
-
 # Linked List: shake tree -> dig fossils -> catch bugs
 print_linked_list(add_first(task_1, "check turnip prices"))
 """

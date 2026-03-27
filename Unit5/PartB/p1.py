@@ -10,15 +10,13 @@ class Villager:
         self.friends = []
 
     def get_mutuals(self, new_contact):
-        # bob_friends = [stitches, raymond, fauna]
-        # marshal_friends = [raymond, ankha, fauna]
-        # The common friends between bob and marshal are raymond and fauna
-        mutual = []
-        for friend in self.friends:
-            if friend in new_contact.friends:
-                mutual.append(friend.name)
+        # Create new instance
+        stack = []
+        for i in self.friends:
+            if i in new_contact.friends:
+                stack.append(i.name)
 
-        return mutual
+        return stack
 
 
 bob = Villager("Bob", "Cat", "pthhhpth")
