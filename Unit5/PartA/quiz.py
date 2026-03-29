@@ -1,7 +1,8 @@
 class Node:
-	def __init__(self, value, next=None):
-		self.value = value
-		self.next = next
+    def __init__(self, value, next=None):
+        self.value = value
+        self.next = next
+
 
 # For testing
 def print_linked_list(head):
@@ -9,17 +10,16 @@ def print_linked_list(head):
     while current:
         print(current.value, end=" -> " if current.next else "\n")
         current = current.next
-        
-def reverse_first_k(head, k):
-	#given head reverse the k elements
-    dummy = head
-    move dummy k tim
-    # return head of the reversed linked list
-    # if k is larger than the length of the linked list, reverse the whole linked list
 
-head = Node("apple", Node("cherry", Node("orange", Node("peach", Node("pear")))))
 
-print_linked_list(reverse_first_k(head, 3))
-'''
-orange -> cherry -> apple -> peach -> pear
-'''
+# Determine which list contains more prime numbers
+# The function returns the head of the list that has
+# the greatest count of prime numbers.
+def count_nodes_with_value(head, val):
+    count = 0
+    current = head
+    while current:
+        if current.value == val:
+            count += 1
+        current = current.next
+    return count
