@@ -6,13 +6,14 @@ class SongNode:
 
 
 def on_repeat(playlist_head):
+    # slow past pointer method,
+    # idea we have slow and fast
+    # move fast pointer twice as fast as slow pointer.
     if not playlist_head:
-        return None
-    # Find the first node in the cycle
+        return False
     slow = playlist_head
     fast = playlist_head
-    # Move slow and fast pointers until they meet
-    while fast and fast.next:
+    while slow and fast:
         slow = slow.next
         fast = fast.next.next
         if slow == fast:
