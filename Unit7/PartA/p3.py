@@ -1,20 +1,18 @@
 def count_suits_iterative(suits):
-    unique_suits = set()
-    for suit in suits:
-        unique_suits.add(suit)
+    unique_suits = set(suits)
     return len(unique_suits)
 
 
 def count_suits_recursive(suits):
     if not suits:
         return 0
-    first = suits[0]
-    rest_unique_count = count_suits_recursive(suits[1:])
-    if first in suits[1:]:
-        return rest_unique_count
+    start_indx = suits[0]
+    unique_suits = count_suits_recursive(suits[1:])
+    if start_indx in suits[1:]:
+        return unique_suits
     else:
-        return 1 + rest_unique_count
+        return 1 + unique_suits
 
 
-print(count_suits_iterative(["Mark I", "Mark II", "Mark III"]))
+print(count_suits_iterative(["Mark I", "Mark I", "Mark III"]))
 print(count_suits_recursive(["Mark I", "Mark I", "Mark III"]))
