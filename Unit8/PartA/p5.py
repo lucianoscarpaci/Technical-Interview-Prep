@@ -16,10 +16,10 @@ Evaluate the time complexity of your function. Define your variables and provide
 def count_leaves(root):
     if root is None:
         return 0
-    if (root.left and root.right) is None:
+
+    if root.left is None and root.right is None:
         return 1
 
-    # recursively find left side and right side
     left_side = count_leaves(root.left)
     right_side = count_leaves(root.right)
     return left_side + right_side

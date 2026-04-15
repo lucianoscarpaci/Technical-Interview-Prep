@@ -6,14 +6,9 @@ class TreeNode:
 
 
 def right_vine(root):
-    if root is None:
+    if not root:
         return []
-    list = []
-    list.append(root.val)
-    if root.right:
-        list.append(root.right.val)
-        list.append(root.right.right.val)
-    return list
+    return [root.val] + right_vine(root.right)
 
 
 """

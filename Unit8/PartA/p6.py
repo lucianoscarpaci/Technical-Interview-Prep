@@ -5,14 +5,13 @@ class TreeNode:
         self.right = right
 
 
-def right_vine(root):
+def survey_tree(root):
+    if root is None:
+        return []
 
-    nodes = []
-    while root:
-        nodes.append(root.val)
-        root = root.right
-
-    return nodes
+    left_side = survey_tree(root.left)
+    right_side = survey_tree(root.right)
+    return left_side + right_side + [root.val]
 
 
 """
@@ -22,20 +21,11 @@ def right_vine(root):
   /         /    \
 Leaf1    Leaf2  Leaf3
 """
-ivy1 = TreeNode(
+
+magnolia = TreeNode(
     "Root",
     TreeNode("Node1", TreeNode("Leaf1")),
     TreeNode("Node2", TreeNode("Leaf2"), TreeNode("Leaf3")),
 )
 
-"""
-      Root
-      /  
-    Node1
-    /
-  Leaf1  
-"""
-ivy2 = TreeNode("Root", TreeNode("Node1", TreeNode("Leaf1")))
-
-print(right_vine(ivy1))
-print(right_vine(ivy2))
+print(survey_tree(magnolia))

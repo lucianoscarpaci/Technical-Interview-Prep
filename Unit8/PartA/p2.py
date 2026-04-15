@@ -18,14 +18,7 @@ Return the result of evaluating the root node.
 
 
 def calculate_yield(root):
-    if root.val == "+":
-        return root.left.val + root.right.val
-    if root.val == "-":
-        return root.left.val - root.right.val
-    if root.val == "*":
-        return root.left.val * root.right.val
-    if root.val == "/":
-        return root.left.val / root.right.val
+    return eval(f"{root.left.val} + {root.val} + {root.right.val}")
 
 
 apple_tree = TreeNode("+", TreeNode(7), TreeNode(5))
