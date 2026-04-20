@@ -9,11 +9,25 @@ class TreeNode:
         self.right = right
 
 
-def max_value_node(node):
-    current = node
-    while current.right is not None:
-        current = current.right
-    return current
+def is_balanced(root):
+    def validate(node):
+        if not node:
+            return True, 0
+
+        left_balanced, left_height = validate(node.left)
+        if not left_balanced:
+            return False, 0
+
+        right_balanced, right_height = validate(node.right)
+        if not right_balanced:
+            return False, 0
+
+        balanced = abs(left_height - right_height) <= 1
+        height = max(left_height, right_height) + 1
+
+        return balanced, height
+
+    return validate(root)[0]
 
 
 def print_tree(root):
