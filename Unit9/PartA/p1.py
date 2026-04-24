@@ -62,10 +62,15 @@ def merge_orders(order1, order2):
         return order2
     if not order2:
         return order1
-    merged_order = TreeNode(order1.val + order2.val)
-    merged_order.left = merge_orders(order1.left, order2.left)
-    merged_order.right = merge_orders(order1.right, order2.right)
-    return merged_order
+
+    # Merge the nodes
+    merged = TreeNode(order1.val + order2.val)
+
+    # Recursively merge the left and right children
+    merged.left = merge_orders(order1.left, order2.left)
+    merged.right = merge_orders(order1.right, order2.right)
+
+    return merged
 
 
 cookies1 = [1, 3, 2, 5]
